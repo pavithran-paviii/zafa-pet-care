@@ -1,0 +1,147 @@
+@import "../../index.scss";
+
+.client {
+  position: relative;
+  padding: 2rem;
+  height: 100%;
+  overflow: hidden;
+
+  & > .topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    & > .searchOption {
+      padding: 1rem 1.5rem;
+      border: 1px solid grey;
+      min-width: 450px;
+      border-radius: 15px;
+      outline: none;
+
+      &:focus {
+        border: 1px solid $primary-color;
+      }
+    }
+
+    & > .addClient {
+      background: $primary-color;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 35px;
+      margin-left: auto;
+      width: max-content;
+      cursor: pointer;
+      outline: none;
+      border: none;
+    }
+  }
+
+  & > .tableContainer {
+    height: calc(100% - 4rem);
+
+    & > table {
+      width: 100%;
+
+      th,
+      td {
+        padding: 1rem;
+        text-align: left;
+      }
+
+      thead {
+        background: $primary-color;
+        color: white;
+      }
+
+      tbody {
+        border: 1px solid #e5e5e5;
+        & > tr {
+          border-bottom: 1px solid #e5e5e5;
+
+          & > :nth-child(5),
+          :nth-child(6) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $primary-color;
+            font-size: 1.2rem;
+            cursor: pointer;
+          }
+        }
+
+        & > :last-child {
+          border: none;
+        }
+      }
+
+      tr {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) 100px 100px;
+      }
+    }
+  }
+
+  & > .nextRemainder {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+
+    & > .overlayContainer {
+      position: absolute;
+      background: #00000080;
+      inset: 0;
+      // z-index: 1;
+    }
+
+    & > .increaseContainer {
+      background: white;
+      padding: 3rem;
+      // border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      & > .title {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $primary-color;
+      }
+
+      & > :nth-child(2) {
+        margin: 1rem 0;
+      }
+
+      & > .addinventory {
+        background: $primary-color;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        margin-left: auto;
+        width: max-content;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        margin-top: 1rem;
+      }
+
+      & > .inventoryFields {
+        width: 325px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & > button {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
