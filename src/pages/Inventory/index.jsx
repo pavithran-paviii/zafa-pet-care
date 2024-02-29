@@ -16,6 +16,7 @@ const Inventory = () => {
   const [selectedMedicine, setSelectedMedicine] = useState("");
   const [increaseInventory, setIncreaseInventory] = useState(false);
   const [inventoryForm, setInventoryForm] = useState(false);
+  const [refreshLocal, setRefreshLocal] = useState(false);
 
   //functions
 
@@ -65,10 +66,8 @@ const Inventory = () => {
   }
 
   useEffect(() => {
-    if (allInventory?.length < 1) {
-      getAllInventory();
-    }
-  });
+    getAllInventory();
+  }, [refreshLocal]);
 
   return (
     <div className={classNames.inventory}>
