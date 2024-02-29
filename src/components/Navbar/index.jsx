@@ -3,7 +3,6 @@ import classNames from "./navbar.module.scss";
 
 //assets
 import fullLogo from "../../assets/images/Veterinary.svg";
-import { ReactComponent as FullLogo } from "../../assets/images/fullLogo.svg";
 
 const Navbar = ({ isAppearing }) => {
   const [selectedNavigation, setSelectedNavigation] = useState("Work");

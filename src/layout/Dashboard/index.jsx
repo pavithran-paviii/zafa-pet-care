@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import classNames from "./dashboardLayout.module.scss";
 
 //assets
@@ -8,7 +8,6 @@ import { IoIosSettings } from "react-icons/io";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../context/globalContext";
 import { IoLogOut } from "react-icons/io5";
-import { logoutFunc } from "../../assets/functions";
 
 const DashboardLayout = ({ child }) => {
   const navigate = useNavigate();

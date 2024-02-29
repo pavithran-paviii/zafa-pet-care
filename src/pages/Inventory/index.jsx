@@ -65,8 +65,10 @@ const Inventory = () => {
   }
 
   useEffect(() => {
-    getAllInventory();
-  }, []);
+    if (allInventory?.length < 1) {
+      getAllInventory();
+    }
+  });
 
   return (
     <div className={classNames.inventory}>

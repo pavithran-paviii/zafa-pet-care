@@ -1,10 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./home.scss";
 
 //imports
 import Navbar from "../../components/Navbar";
-import Landing from "../../components/Home/Landing";
-import Features from "../../components/Home/Features";
 import NewLanding from "../../components/Home/NewLanding";
 import Procedure from "../../components/Home/Procedure";
 import Footer from "../../components/Home/Footer";
@@ -37,8 +35,6 @@ const Home = () => {
   return (
     <>
       <Navbar isAppearing={showNavbar && newLandingVisible} />
-      {/* <Landing />
-      <Features /> */}
       <NewLanding setNewLandingVisible={setNewLandingVisible} />
       <Procedure />
       <Footer />
